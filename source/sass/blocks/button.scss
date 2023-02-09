@@ -1,0 +1,58 @@
+@import "../global/variables.scss";
+
+.button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: $base-white;
+  background-color: $primary;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: $base-gray;
+    pointer-events: none;
+  }
+
+  &--secondary {
+    color: $primary;
+    background-color: $base-white;
+
+    &:hover,
+    &:focus {
+      color: $base-white;
+      background-color: $primary-lighter;
+      outline: none;
+    }
+
+    &:active {
+      color: $base-white;
+      background-color: $primary-darker;
+    }
+
+    &:disabled,
+    &--disabled {
+      color: $base-white;
+      background-color: $light-gray;
+    }
+  }
+}
