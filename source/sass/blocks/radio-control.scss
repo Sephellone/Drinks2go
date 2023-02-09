@@ -1,0 +1,92 @@
+@import "../global/variables.scss";
+
+.radio-control {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  transform: translateX(-2px);
+
+  &--disabled {
+    color: $base-gray;
+
+    .radio-control__mark {
+      border-color: $light-gray;
+      background-color: transparent;
+      pointer-events: none;
+    }
+
+    .radio-control__input:checked + .radio-control__mark {
+      border-color: $light-gray;
+      background-color: transparent;
+      &::after {
+        display: block;
+        background-color: $light-gray;
+      }
+    }
+  }
+}
+
+.radio-control__mark {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border: 2px solid $base-gray;
+  background-color: $base-white;
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: border-color 0.2s, ease-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    visibility: hidden;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: transparent;
+
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s ease-out;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: $primary-lighter;
+    &::after {
+      visibility: visible;
+      background-color: $transparent-primary;
+    }
+  }
+}
+
+.radio-control__input:checked + .radio-control__mark {
+  border-color: $primary;
+  &::after {
+    visibility: visible;
+    background-color: $primary;
+  }
+}
+
+.radio-control__input:disabled + .radio-control__mark {
+  border-color: $light-gray;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.radio-control__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}

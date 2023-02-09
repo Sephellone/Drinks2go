@@ -1,0 +1,128 @@
+@import "../global/variables.scss";
+
+.filters {
+  padding-bottom: 36px;
+}
+
+.filters__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 11px;
+}
+
+.filters__part {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  border: none;
+}
+
+.filters__legend {
+  padding: 0;
+  padding-top: 2px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  transform: translateX(-2px);
+}
+
+.filters__range {
+  margin-bottom: 25px;
+}
+
+.filters__inputs-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 8.8px;
+    height: 2px;
+    background-color: $base-gray;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+.filters__range-input {
+  display: block;
+  box-sizing: border-box;
+  width: 118px;
+  margin: 0;
+  padding: 6px 10px;
+  font-family: $Montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  background-color: $base-white;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+  color: $base-black;
+
+  &::placeholder {
+    color: $base-gray;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $primary-darker;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $lightest-gray;
+    border-color: $light-gray;
+    pointer-events: none;
+  }
+}
+
+.filters__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 21px;
+}
+
+.filters__list-item {
+  display: block;
+  margin: 0;
+  margin-bottom: 21.3px;
+  padding: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filters__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters__button {
+  padding: 10.6px 6px;
+  width: 160px;
+  font-size: 14px;
+  line-height: 24px;
+
+  &--submit {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+}

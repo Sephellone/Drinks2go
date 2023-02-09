@@ -21,8 +21,10 @@
   text-decoration: none;
 
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     background-color: $secondary;
+    outline: none;
   }
 }
 
@@ -81,8 +83,10 @@
   }
 
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     background-color: $secondary;
+    outline: none;
   }
 
   &::before,

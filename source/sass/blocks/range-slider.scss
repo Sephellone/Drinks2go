@@ -1,0 +1,73 @@
+@import "../global/variables.scss";
+
+.range-slider {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 24px;
+}
+
+.range-slider__track {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $light-gray;
+}
+
+.range-slider__slider {
+  position: absolute;
+  top: 50%;
+  display: block;
+  height: 4px;
+  background-color: $primary-lighter;
+
+  transform: translateY(-50%);
+}
+
+.range-slider__handle {
+  position: absolute;
+  top: 50%;
+  box-sizing: border-box;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: $base-white;
+  border: 2px solid $primary-lighter;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    &::after {
+      display: block;
+      background-color: $transparent-primary;
+    }
+  }
+
+  &:active {
+    border-color: $primary;
+    &::after {
+      display: block;
+      background-color: $primary;
+    }
+  }
+}

@@ -225,21 +225,23 @@
                   <!-- Range slider цены -->
                   <fieldset class="filters__part filters__part--range">
                     <legend class="filters__legend">Цена</legend>
-                    <div class="range-slider">
+                    <div class="filters__range range-slider">
                       <div class="range-slider__track">
-                        <div class="range-slider__slider"></div>
-                        <button class="range-slider__handle range-slider__handle--min" type="button">
+                        <div class="range-slider__slider" style="left: 0; width: 240px"></div>
+                        <button class="range-slider__handle range-slider__handle--min" type="button" style="left: 0">
                           <span class="visually-hidden">Изменить минимальную цену</span>
                         </button>
-                        <button class="range-slider__handle range-slider__handle--max" type="button">
+                        <button class="range-slider__handle range-slider__handle--max" type="button" style="left: 235px">
                           <span class="visually-hidden">Изменить максимальную цену</span>
                         </button>
                       </div>
                     </div>
-                    <label class="visually-hidden" for="min-price">Минимальная цена</label>
-                    <input class="filters__range-input filters__range-input--min" type="text" name="min-price" id="min-price" placeholder="0">
-                    <label class="visually-hidden" for="max-price">Максимальная цена</label>
-                    <input class="filters__range-input filters__range-input--max" type="text" name="max-price" id="max-price" placeholder="900" value="900">
+                    <div class="filters__inputs-wrapper">
+                      <label class="visually-hidden" for="min-price">Минимальная цена</label>
+                      <input class="filters__range-input filters__range-input--min" type="text" name="min-price" id="min-price" placeholder="0">
+                      <label class="visually-hidden" for="max-price">Максимальная цена</label>
+                      <input class="filters__range-input filters__range-input--max" type="text" name="max-price" id="max-price" placeholder="900" value="900">
+                    </div>
                   </fieldset>
 
                   <!-- Фильтр выбора молока -->
@@ -248,28 +250,28 @@
                     <ul class="filters__list">
                       <li class="filters__list-item">
                         <label class="radio-control">
-                          <input type="radio" name="milk" value="whatever" checked>
+                          <input class="radio-control__input visually-hidden" type="radio" name="milk" value="whatever" checked>
                           <span class="radio-control__mark"></span>
                           <span class="radio-control__text">Неважно</span>
                         </label>
                       </li>
                       <li class="filters__list-item">
                         <label class="radio-control">
-                          <input class="visually-hidden" type="radio" name="milk" value="animal">
+                          <input class="radio-control__input visually-hidden" type="radio" name="milk" value="animal">
                           <span class="radio-control__mark"></span>
                           <span class="radio-control__text">Только животное</span>
                         </label>
                       </li>
                       <li class="filters__list-item">
                         <label class="radio-control">
-                          <input class="visually-hidden" type="radio" name="milk" value="plant">
+                          <input class="radio-control__input visually-hidden" type="radio" name="milk" value="plant">
                           <span class="radio-control__mark"></span>
                           <span class="radio-control__text">Только растительное</span>
                         </label>
                       </li>
                       <li class="filters__list-item">
                         <label class="radio-control radio-control--disabled">
-                          <input class="visually-hidden" type="radio" name="milk" value="no-milk" disabled>
+                          <input class="radio-control__input visually-hidden" type="radio" name="milk" value="no-milk" disabled>
                           <span class="radio-control__mark"></span>
                           <span class="radio-control__text">Без молока</span>
                         </label>
@@ -283,35 +285,35 @@
                     <ul class="filters__list">
                       <li class="filters__list-item">
                         <label class="checkbox-control">
-                          <input class="visually-hidden" type="checkbox" name="country" value="brazil" checked>
+                          <input class="checkbox-control__input visually-hidden" type="checkbox" name="country" value="brazil" checked>
                           <span class="checkbox-control__mark"></span>
                           <span class="checkbox-control__text">Бразилия</span>
                         </label>
                       </li>
                       <li class="filters__list-item">
                         <label class="checkbox-control">
-                          <input class="visually-hidden" type="checkbox" name="country" value="ethiopia">
+                          <input class="checkbox-control__input visually-hidden" type="checkbox" name="country" value="ethiopia">
                           <span class="checkbox-control__mark"></span>
                           <span class="checkbox-control__text">Эфиопия</span>
                         </label>
                       </li>
                       <li class="filters__list-item">
                         <label class="checkbox-control">
-                          <input class="visually-hidden" type="checkbox" name="country" value="columbia">
+                          <input class="checkbox-control__input visually-hidden" type="checkbox" name="country" value="columbia">
                           <span class="checkbox-control__mark"></span>
                           <span class="checkbox-control__text">Колумбия</span>
                         </label>
                       </li>
                       <li class="filters__list-item">
                         <label class="checkbox-control">
-                          <input class="visually-hidden" type="checkbox" name="country" value="costa-rica">
+                          <input class="checkbox-control__input visually-hidden" type="checkbox" name="country" value="costa-rica">
                           <span class="checkbox-control__mark"></span>
                           <span class="checkbox-control__text">Коста-Рика</span>
                         </label>
                       </li>
                       <li class="filters__list-item">
                         <label class="checkbox-control checkbox-control--disabled">
-                          <input class="visually-hidden" type="checkbox" name="country" value="peru" disabled>
+                          <input class="checkbox-control__input visually-hidden" type="checkbox" name="country" value="peru" disabled>
                           <span class="checkbox-control__mark"></span>
                           <span class="checkbox-control__text">Перу</span>
                         </label>
@@ -320,8 +322,8 @@
                   </fieldset>
                 </div>
                 <div class="filters__button-wrapper">
-                  <button class="filters__submit button" type="submit">Применить фильтр</button>
-                  <button class="filters__reset button button--secondary" type="reset">Сбросить фильтр</button>
+                  <button class="filters__button filters__button--submit button" type="submit">Применить фильтр</button>
+                  <button class="filters__button filters__button--reset button button--secondary" type="reset">Сбросить фильтр</button>
                 </div>
               </form>
             </div>
