@@ -1,0 +1,68 @@
+@import "../global/variables.scss";
+
+.map {
+  width: 100%;
+
+  &--no-js {
+    .map__no-js {
+      display: block;
+    }
+
+    .map__wrapper {
+      display: none;
+    }
+  }
+}
+
+.map__no-js {
+  display: none;
+  position: relative;
+  box-sizing: border-box;
+  width: $mobile-width;
+  margin: 0 auto;
+}
+
+.map__image {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+
+.map__no-js-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 38px;
+  height: 50px;
+
+  transform: translate(-10%, -50%);
+}
+
+.map__wrapper {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 420px;
+  background-color: $base-gray;
+}
+
+@media (min-width: $tablet-width) {
+  .map__no-js {
+    width: $tablet-width;
+  }
+
+  .map__wrapper {
+    height: 480px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map__no-js {
+    width: $desktop-width;
+  }
+
+  .map__wrapper {
+    height: 540px;
+  }
+}

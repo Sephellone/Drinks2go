@@ -1,0 +1,33 @@
+@import "../global/variables.scss";
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social__item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  color: $base-gray;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $secondary;
+    color: $primary;
+  }
+}

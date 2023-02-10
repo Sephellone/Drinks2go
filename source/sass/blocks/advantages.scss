@@ -79,7 +79,7 @@
 @media (min-width: $desktop-width) {
   .advantages {
     grid-template-columns: repeat(4, 1fr);
-    padding: 40px 0;
+    padding: 45px 0 40px 0;
     column-gap: 30px;
     row-gap: 50px;
   }
