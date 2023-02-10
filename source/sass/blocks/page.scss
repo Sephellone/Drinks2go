@@ -69,6 +69,12 @@
     width: $tablet-width;
   }
 
+  .page__section {
+    &--catalog {
+      padding-top: 20px;
+    }
+  }
+
   .page__section-wrapper {
     width: $tablet-width;
   }
@@ -85,5 +91,11 @@
 
   .page__section-wrapper {
     width: $desktop-width;
+  }
+
+  .page__section {
+    &--catalog {
+      padding-top: 0;
+    }
   }
 }

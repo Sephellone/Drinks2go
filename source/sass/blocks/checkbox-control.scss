@@ -12,16 +12,19 @@
     color: $base-gray;
     pointer-events: none;
 
-    .checkbox-control__mark  {
+    .checkbox-control__mark {
       background-color: $light-gray;
       pointer-events: none;
     }
 
     .checkbox-control__input:checked + .checkbox-control__mark {
       background-color: $light-gray;
+
+      /* stylelint-disable -- Это не вложенность, это псевдоэлемент */
       &::after {
         background-color: $base-gray;
       }
+      /* stylelint-enable */
     }
   }
 }
@@ -84,15 +87,12 @@
   &:disabled + .checkbox-control__mark {
     pointer-events: none;
     background-color: $light-gray;
+
     &::after {
       background-color: $lightest-gray;
     }
   }
 }
-
-
-
-
 
 .checkbox-control__text {
   font-weight: 400;

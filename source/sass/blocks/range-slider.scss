@@ -11,6 +11,7 @@
 }
 
 .range-slider__track {
+  box-sizing: border-box;
   position: relative;
   display: block;
   width: 100%;
@@ -22,6 +23,8 @@
   position: absolute;
   top: 50%;
   display: block;
+  width: 240px;
+  max-width: 100%;
   height: 4px;
   background-color: $primary-lighter;
 
@@ -41,6 +44,10 @@
   transform: translateY(-50%);
   cursor: pointer;
 
+  &--max {
+    left: 240px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -57,6 +64,7 @@
   &:hover,
   &:focus {
     outline: none;
+
     &::after {
       display: block;
       background-color: $transparent-primary;
@@ -65,9 +73,43 @@
 
   &:active {
     border-color: $primary;
+
     &::after {
       display: block;
       background-color: $primary;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .range-slider {
+    width: 220px;
+  }
+
+  .range-slider__slider {
+    width: 190px;
+  }
+
+  .range-slider__handle {
+    &--max {
+      left: 180px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range-slider {
+    width: 318px;
+    padding: 0;
+  }
+
+  .range-slider__slider {
+    width: 290px;
+  }
+
+  .range-slider__handle {
+    &--max {
+      left: 275px;
     }
   }
 }
