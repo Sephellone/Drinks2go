@@ -109,7 +109,7 @@
 
 .catalog__styled-select {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 100%;
   right: 0;
   width: 190px;
@@ -165,8 +165,8 @@
   }
 
   .catalog__pagination {
-    width: 460px;
-    transform: translateX(30px);
+    max-width: max-content;
+    transform: translateX(15px);
   }
 }
 
