@@ -21,49 +21,6 @@
   padding: 0;
 }
 
-// .main-promo__button {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   box-sizing: border-box;
-//   width: 80px;
-//   border: none;
-//   outline: none;
-//   box-shadow: none;
-//   background-color: transparent;
-//   color: $primary;
-//   cursor: pointer;
-
-//   &--prev {
-//     left: 0;
-//     transform: translateX(-40%);
-//   }
-
-//   &--next {
-//     right: 0;
-//     transform: rotate(180deg) translateX(-40%);
-//   }
-
-//   &:hover,
-//   &:focus {
-//     background: linear-gradient(90deg, $base-white 0%, rgba(255, 255, 255, 0) 100%);
-//   }
-
-//   &:active {
-//     background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
-//   }
-
-//   &:disabled,
-//   &--disabled {
-//     background: transparent;
-//     color: $base-gray;
-//     pointer-events: none;
-//   }
-// }
-
 .main-promo__pagination {
   display: none;
 }
