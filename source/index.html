@@ -8,6 +8,8 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -23,7 +25,7 @@
         <span class="header__logo-text">Интернет-магазин<br>кофейных напитков</span>
       </a>
       <!-- Навигация (та ее часть, которая скрывается в мобильной версии) -->
-      <nav class="header__nav header__nav--closed main-nav">
+      <nav class="header__nav header__nav--no-js main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
@@ -99,7 +101,7 @@
               </div>
             </li>
 
-            <li class="main-promo__slide-item swiper-slide" hidden>
+            <li class="main-promo__slide-item swiper-slide">
               <div class="main-promo__slide promo-card promo-card--lavander">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/slide2-desktop.webp 1x, img/slider/slide2-desktop@2x.webp 2x">
@@ -124,7 +126,7 @@
               </div>
             </li>
 
-            <li class="main-promo__slide-item swiper-slide" hidden>
+            <li class="main-promo__slide-item swiper-slide">
               <div class="main-promo__slide promo-card promo-card--espresso">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/slide3-desktop.webp 1x, img/slider/slide3-desktop@2x.webp 2x">
@@ -223,12 +225,13 @@
 
                 <div class="filters__wrapper">
                   <!-- Range slider цены -->
+
                   <fieldset class="filters__part filters__part--range">
                     <legend class="filters__legend">Цена</legend>
                     <div class="filters__range range-slider">
                       <div class="range-slider__track">
                         <div class="range-slider__slider"></div>
-                        <button class="range-slider__handle range-slider__handle--min" type="button" style="left: 0">
+                        <button class="range-slider__handle range-slider__handle--min" type="button">
                           <span class="visually-hidden">Изменить минимальную цену</span>
                         </button>
                         <button class="range-slider__handle range-slider__handle--max" type="button">
@@ -331,7 +334,7 @@
             <!-- Сортировка и список товаров  -->
             <div class="catalog__cards-wrapper">
               <div class="catalog__sorting-styler">
-                <label class="catalog__sort-wrapper">
+                <label class="catalog__sort-wrapper catalog__sort-wrapper--no-js">
                   <span class="catalog__sort-label">Сортировка:</span>
                   <select class="catalog__sort" name="sort" id="sort">
                     <option value="default" selected>по умолчанию</option>
@@ -340,11 +343,17 @@
                     <option value="high-rating">высокий рейтинг</option>
                   </select>
                 </label>
+                <div class="catalog__sort-wrapper catalog__sort-wrapper--js catalog__sort-wrapper--hidden">
+                  <span class="catalog__sort-label">Сортировка:</span>
+                  <span class="catalog__sort catalog__sort--styled" tabindex="0">
+                    <span class="catalog__pseudosort" id="styled-sort">по умолчанию</span>
+                  </span>
+                </div>
                 <div class="catalog__styled-select styled-select styled-select--closed">
-                  <button class="styled-select__option styled-select__option--selected" type="button" name="default">по умолчанию</button>
-                  <button class="styled-select__option" type="button" name="high-first">сначала дорогие</button>
-                  <button class="styled-select__option" type="button" name="low-first">сначала дешёвые</button>
-                  <button class="styled-select__option" type="button" name="high-rating">высокий рейтинг</button>
+                  <button class="styled-select__option styled-select__option--selected" type="button" name="default" tabindex="0">по умолчанию</button>
+                  <button class="styled-select__option" type="button" name="high-first" tabindex="0">сначала дорогие</button>
+                  <button class="styled-select__option" type="button" name="low-first" tabindex="0">сначала дешёвые</button>
+                  <button class="styled-select__option" type="button" name="high-rating" tabindex="0">высокий рейтинг</button>
                 </div>
               </div>
               <!-- Список товаров -->
@@ -664,7 +673,8 @@
         </a>
       </div>
     </footer>
-
-    <script src="./js/script.js" defer></script>
+    <script src="./vendor/swiper/swiper-bundle.js" defer></script>
+    <script src="./vendor/leaflet/leaflet.js" defer></script>
+    <script src="./js/script.js" type="module" defer></script>
   </body>
 </html>

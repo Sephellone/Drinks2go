@@ -36,7 +36,8 @@
     border-bottom: none;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $secondary;
     color: $base-black;
   }

@@ -55,6 +55,10 @@
     transition: transform 0.2s ease-out;
   }
 
+  &--hidden {
+    display: none;
+  }
+
   &--open {
     &::after {
       transform: translateY(0) skew(3deg) rotate(225deg);
@@ -81,8 +85,15 @@
   border: none;
   appearance: none;
   color: $primary;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
 
   cursor: pointer;
+
+  &--styled {
+    padding: 0 30px 0 10px;
+  }
 
   &:hover,
   &:focus {
@@ -98,9 +109,21 @@
 
 .catalog__styled-select {
   position: absolute;
+  z-index: 2;
   top: 100%;
   right: 0;
   width: 190px;
+}
+
+.catalog__pseudosort {
+  display: block;
+  width: 130px;
+  padding: 4px 0;
+  font-size: 16px;
+  line-height: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
 }
 
 .catalog__card-list {
