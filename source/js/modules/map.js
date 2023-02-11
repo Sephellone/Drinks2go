@@ -3,6 +3,9 @@ const PinLocation = {
   LAT: 59.968321,
   LNG: 30.317462,
 };
+const POPUP_TEXT = 'Санкт-Петербург, набережная реки Карповки, дом 5';
+const popup = L.popup()
+  .setContent('<p>Санкт-Петербург, <br /> набережная реки Карповки, дом 5<br /><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="opacity: 0;">...</a></p>');
 
 const InitLocation = {
   LAT: 59.968385,
@@ -41,7 +44,8 @@ const createMarker = () => {
         lng: PinLocation.LNG,
       })
     .setIcon(mainPinIcon)
-    .addTo(map);
+    .addTo(map)
+    .bindPopup(popup);
 };
 
 const createMap = (coordinate) => {
