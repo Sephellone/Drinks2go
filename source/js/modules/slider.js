@@ -4,6 +4,7 @@ const promoSlider = new Swiper ('.swiper', {
 
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 
   navigation: {

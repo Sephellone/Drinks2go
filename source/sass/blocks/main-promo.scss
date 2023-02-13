@@ -17,6 +17,16 @@
   padding: 0;
 }
 
+.main-promo__buttons-wrapper {
+  position: relative;
+  z-index: 1;
+  width: $mobile-width;
+  height: 100%;
+  margin: 0 auto;
+
+  transform: translateY(-100%);
+}
+
 .main-promo__pagination {
   display: none;
 }
@@ -27,18 +37,8 @@
     height: 828px;
   }
 
-  .main-promo__button {
-    height: 640px;
-
-    &--prev {
-      left: 0;
-      transform: translateX(0);
-    }
-
-    &--next {
-      right: 0;
-      transform: rotate(180deg) translateX(0);
-    }
+  .main-promo__buttons-wrapper {
+    width: $tablet-width;
   }
 }
 
@@ -48,8 +48,8 @@
     height: 714px;
   }
 
-  .main-promo__button {
-    height: 100%;
+  .main-promo__buttons-wrapper {
+    width: $desktop-width;
   }
 
   .main-promo__pagination {

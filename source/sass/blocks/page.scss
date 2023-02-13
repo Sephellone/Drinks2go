@@ -40,7 +40,7 @@
 
 .page__promo {
   box-sizing: border-box;
-  width: $mobile-width;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -71,10 +71,6 @@
     width: $tablet-width;
   }
 
-  .page__promo {
-    width: $tablet-width;
-  }
-
   .page__section {
     &--catalog {
       padding-top: 20px;
@@ -92,10 +88,6 @@
 
 @media (min-width: $desktop-width) {
   .page__header {
-    width: $desktop-width;
-  }
-
-  .page__promo {
     width: $desktop-width;
   }
 
